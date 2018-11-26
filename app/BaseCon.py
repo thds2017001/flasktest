@@ -8,11 +8,10 @@ def is_login(funct):
 			login_url=url_for('login')
 			return redirect(login_url)
 		return funct(*args,**kwargs)
+	#return inner
+	inner.__name__ = funct.__name__
 	return inner
-
-
 if __name__ == "__main__":
 	pass
-	#is_login()
 
 	

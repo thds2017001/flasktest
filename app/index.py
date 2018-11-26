@@ -11,8 +11,7 @@ from .BaseCon import is_login
 @app.route('/')
 @is_login
 def index():
-	app.logger.info('这是info')
-	app.logger.debug('这是的debug')
+	
 	return render_template("index.html")
 
 
